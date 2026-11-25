@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* sub1_2-극장소개 콘텐츠 */
+
+
+
+#content .content_area{margin: 0 20px;}
+/*  탭  */
+#content .content_area .facility_tab{display: flex; padding: 4px; background: #f0f0f0; border-radius: 10px;}
+#content .content_area .facility_tab li{flex: 1;}
+#content .content_area .facility_tab a{display: block; padding: 10px 0; border-radius: 8px;
+    text-align: center; font-size: 1rem; color: var(--color-font2); font-weight: 600;}
+#content .content_area .facility_tab a.active{background: #fff; font-weight: 700; color: var(--color-point3);}
+#content .content_area .tab_cont{margin: 20px 0 50px;}
+#content .tab_cont + .tab_cont{display: none;}
+/* 시설 안내: 아코디언 카드 */
+#content .content_area .facility_item{border: 1px solid #d9d9d9; border-radius: 15px; background: #fff;}
+#content .content_area .facility_item + .facility_item{margin-top: 12px;}
+#content .content_area .facility_item .item_btn{display: flex; align-items: center; gap: 12px; padding: 15px;}
+#content .content_area .facility_item .item_btn img{width: 55px; height: 55px; object-fit: cover; border-radius: 4px;}
+#content .content_area .facility_item .item_btn .txt{flex: 1;}
+#content .content_area .facility_item .item_btn .en{display: block; font-size: .9rem; font-weight: 500; color: var(--color-point3);}
+#content .content_area .facility_item .item_btn strong{display: block; font-size: var(--font-18-size); font-weight: 700; color: var(--color-font1);}
+#content .content_area .facility_item .item_btn .icon{ color: var(--color-font1); transition: transform .3s;}
+#content .content_area .facility_item.on .item_btn .icon{transform: rotate(180deg);}
+/* 펼쳐지는 내용 */
+#content .content_area .facility_item .detail{display: none; margin: 0 15px; padding: 15px 0 25px; border-top: 1px solid #d9d9d9;}
+#content .content_area .facility_item.on .detail{display: block;}
+#content .content_area .facility_item .detail_tit{font-size: var(--font-20-size); font-weight: 600; line-height: 1.4; color: var(--color-font1);}
+#content .content_area .facility_item .detail_img{display: block; width: 100%; margin-top: 15px; border-radius: 8px;}
+#content .content_area .facility_item .detail_text{margin-top: 15px; font-size: var(--font-14-size); font-weight: 400; line-height: 1.7;
+    color: var(--color-font1); word-break: break-all;}
+#content .content_area .facility_item .system dt{margin-top: 10px; font-size: var(--font-16-size); font-weight: 700; color: var(--color-point3);}
+#content .content_area .facility_item .system dt span{margin-right: 8px;}
+#content .content_area .facility_item .system dd{margin-top: 5px; font-size: .9rem; line-height: 1.6;
+    color: var(--color-font1); word-break: break-all;}
+#content .content_area .facility_item .point{display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;}
+#content .content_area .facility_item .point li{padding: 6px 14px; background: #fdfdd6; border-radius: 20px;
+    font-size: .9rem; color: var(--color-font1);}
+#content .content_area .facility_item .point em{font-weight: 700; color: var(--color-main);}
+#content .content_area .facility_item .spec{display: flex; gap: 8px; margin-top: 20px;}
+#content .content_area .facility_item .spec li{flex: 1; display: flex; flex-direction: column; justify-content: center;
+    padding: 15px 5px; border: 1px solid var(--color-point3); border-radius: 10px; text-align: center;}
+#content .content_area .facility_item .spec strong{font-size: 1.4rem; font-weight: 700; color: var(--color-point3);}
+#content .content_area .facility_item .spec p{margin-top: 5px; font-size: var(--font-12-size); line-height: 1.4; color: var(--color-font2); word-break: break-all;}
+#content .content_area .facility_item .detail_circle{display: block; width: 180px; margin: 30px auto 0;}
+/* 대관 안내 */
+#content .content_area .rental h3{margin-bottom: 20px; font-size: 1.4rem; font-weight: 700; color: var(--color-font1);}
+#content .content_area .rental_step{display: flex; padding: 25px 10px; border: 1px solid #d9d9d9; border-radius: 15px;}
+#content .content_area .rental_step li{position: relative; flex: 1; text-align: center;}
+#content .content_area .rental_step li + li:before{content: ''; position: absolute; top: 25px; right: 50%;
+    width: 100%; border-top: 1px dashed var(--color-point1);}
+#content .content_area .rental_step .icon{position: relative; z-index: 1; display: flex; justify-content: center; align-items: center;
+    width: 50px; height: 50px; margin: 0 auto; border: 1px solid var(--color-point1); border-radius: 50%;
+    background: #fff; font-size: 1.5rem; color: var(--color-point1);}
+#content .content_area .rental_step .num{display: block; margin-top: 10px; font-size: var(--font-12-size); font-weight: 500; color: var(--color-point3);}
+#content .content_area .rental_step strong{display: block; font-size: 1rem; font-weight: 500; color: var(--color-font1);}
+#content .content_area .rental_info{margin-top: 15px; padding: 20px; border: 1px solid #ddd; border-radius: 15px;}
+#content .content_area .rental_info li + li{margin-top: 20px;}
+#content .content_area .rental_info strong{display: block; font-size: var(--font-16-size); font-weight: 700; color: var(--color-point3);}
+#content .content_area .rental_info dt{margin-top: 12px; font-size: var(--font-12-size); font-weight: 500; color: var(--color-font3);}
+#content .content_area .rental_info dd{margin-top: 4px; padding-bottom: 12px; border-bottom: 1px solid #d9d9d9;
+    font-size: var(--font-14-size); line-height: 1.5; color: var(--color-font1); font-weight: 400; word-break: break-all;}
+#content .content_area .rental_info li:last-child dd:last-child{padding-bottom: 0; border-bottom: 0;}
+/* 안내 문구 */
+#content .content_area .rental_notice{display: flex; align-items: center; gap: 8px; margin-top: 15px; padding: 15px;
+    background: var(--color-sub1); border-radius: 10px; font-size: var(--font-12-size); color: var(--color-font1); word-break: break-all;}
+#content .content_area .rental_notice .icon{font-size: var(--font-18-size); color: var(--color-point3);}

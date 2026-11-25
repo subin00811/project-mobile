@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* sub4_3-제휴할인 콘텐츠 */
+
+
+/* 공통 */
+#content .content_area{padding-bottom: 60px;}
+#content .content_area section{padding: 50px 20px 0;}
+#content .content_area section:first-child{padding-top: 0;}
+#content .content_area section > h3{margin-bottom: 20px; font-size: var(--font-20-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .note{margin-top: 15px; font-size: var(--font-14-size); line-height: 1.5; color: var(--color-font2);}
+
+/* 카드사 제휴 할인 */
+#content .content_area .card_list{display: grid; grid-template-columns: 1fr 1fr; gap: 15px;}
+#content .content_area .card_list li{padding: 20px 18px; border: 1px solid #eee3cc; border-radius: 15px;}
+
+#content .content_area .card_list .name{display: flex; align-items: center; gap: 8px;
+    font-size: var(--font-16-size); font-weight: 500; color: var(--color-font1);}
+#content .content_area .card_list .name::before{content: ''; width: 8px; height: 8px; border-radius: 50%;}
+#content .content_area .card_list li.red .name::before{background: var(--color-main);}
+#content .content_area .card_list li.blue .name::before{background: #1a5fd0;}
+
+#content .content_area .card_list .rate{margin-top: 12px; font-size: var(--font-14-size); color: var(--color-font2);}
+#content .content_area .card_list .rate span{display: block; font-family: "Noto Serif KR", serif;
+    font-size: var(--font-h5-size); font-weight: 700; color: var(--color-main);}
+
+#content .content_area .card_list .cond{display: block; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #eee3cc;
+    font-size: var(--font-14-size); line-height: 1.5; color: var(--color-font2);}
+
+/* 통신사 멤버십 할인 */
+#content .content_area .member_list li{display: flex; align-items: center; gap: 15px; padding: 20px 18px;
+    border: 1px solid #d9d9d9; border-radius: 15px;}
+#content .content_area .member_list li + li{margin-top: 15px;}
+#content .content_area .member_list .logo{display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    width: 50px; height: 50px; background: var(--color-main); border-radius: 10px;
+    font-size: var(--font-20-size); font-weight: 700; color: #fff;}
+#content .content_area .member_list dl{flex: 1;}
+#content .content_area .member_list dt{font-size: var(--font-16-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .member_list dd{margin-top: 4px; font-size: var(--font-14-size); line-height: 1.6; color: var(--color-font2);}
+#content .content_area .member_list .rate{text-align: right; font-family: "Noto Serif KR", serif;
+    font-size: var(--font-24-size); font-weight: 700; color: var(--color-main);}
+#content .content_area .member_list .rate span{display: block; margin-bottom: 2px; font-family: "Noto Sans KR", sans-serif;
+    font-size: var(--font-10-size); color: var(--color-font3);}
+
+
+/* 롯데멤버스 */
+#content .content_area .lpoint_box{padding: 25px 20px; background: #fdecec; border-radius: 15px;}
+#content .content_area .lpoint_box dt{position: relative; padding-left: 60px;
+    font-size: var(--font-20-size); font-weight: 700; color: var(--color-font1);}
+#content .content_area .lpoint_box dt .logo{position: absolute; left: 0; top: 50%; margin-top: -22px;
+    display: flex; align-items: center; justify-content: center; width: 45px; height: 45px;
+    background: var(--color-main); border-radius: 50%; font-size: var(--font-20-size); color: #fff;}
+#content .content_area .lpoint_box dt .en{display: block; font-size: var(--font-12-size); font-weight: 500; color: var(--color-font3);}
+#content .content_area .lpoint_box dd{position: relative; padding-left: 12px; font-size: var(--font-14-size); text-align: justify; word-break: break-all;
+    line-height: 1.6; color: var(--color-font2);}
+#content .content_area .lpoint_box dt + dd{margin-top: 20px;}
+#content .content_area .lpoint_box dd + dd{margin-top: 10px;}

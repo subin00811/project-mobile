@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* sub4_2-패키지 콘텐츠 */
+
+/* 공통 */
+#content .content_area{padding-bottom: 60px;}
+#content .content_area .package_food,
+#content .content_area .package_set,
+#content .content_area .package_notice{padding: 70px 20px 0;}
+#content .content_area .package_food > h3,
+#content .content_area .package_set > h3,
+#content .content_area .package_notice > h3{font-family: "Roboto Serif", serif; font-size: var(--font-24-size); font-weight: 600; color: #023373;}
+#content .content_area section > h3 + p{margin: 0 0 20px; font-size: var(--font-14-size); color: var(--color-font2);}
+
+
+/* 인트로 */
+#content .content_area .package_intro{padding: 0 30px;}
+#content .content_area .intro_box{padding: 25px 20px; border-radius: 15px; text-align: center; color: #fff;
+    background: radial-gradient(circle at 50% 35%, #1e62d4, #04174a);}
+#content .content_area .intro_box .logo_box{display: flex; justify-content: center; align-items: center; gap: 15px;}
+#content .content_area .intro_box .logo_box img{height: 28px;}
+#content .content_area .intro_box .logo_box span{font-size: var(--font-12-size); color: #fff;}
+#content .content_area .intro_box .big_tit{display: block; margin-top: 20px; font-family: "Roboto Serif", serif;
+    font-size: var(--font-h4-size); font-weight: 600; letter-spacing: .03em;}
+#content .content_area .intro_box h3{font-size: var(--font-16-size); font-weight: 500;}
+#content .content_area .intro_box .intro_txt{margin-top: 12px; font-size: var(--font-14-size); line-height: 1.6;}
+#content .content_area .intro_box .intro_txt span{color: #7cc0ff;}
+#content .content_area .intro_box .poster{display: block; width: 55%; margin: 20px auto 0; box-shadow: 0 8px 20px var(--box-shadow1)}
+
+/* 안내 박스 */
+#content .content_area .intro_notice{margin-top: 15px; padding: 18px; background: #eaf2fd; border-radius: 15px;}
+#content .content_area .intro_notice li{font-size: var(--font-12-size); line-height: 1.6; color: var(--color-font1);}
+#content .content_area .intro_notice li + li{margin-top: 6px;}
+#content .content_area .intro_notice li span{color: #0073a4;}
+
+
+/* Food & Musical */
+#content .content_area .package_food{margin-top: 70px; padding: 50px 20px; background: #eaf2fd;}
+#content .content_area .food_list{display: grid; grid-template-columns: 1fr 1fr; gap: 25px 12px;}
+#content .content_area .food_list li{padding: 10px 10px 18px; background: #fff; text-align: center;}
+#content .content_area .food_list img{display: block; width: 100%;  border-radius: 5px;}
+#content .content_area .food_list strong{display: block; margin-top: 10px; font-size: var(--font-16-size); font-weight: 700; color: #023373;}
+#content .content_area .food_list span{display: block; margin-top: 4px; font-size: var(--font-12-size); line-height: 1.4; color: var(--color-font2);}
+
+/* Package */
+#content .content_area .package_box{display: flex; gap: 10px;}
+#content .content_area .package_box > li{flex: 1; padding: 18px; border: 1px solid #023373; border-radius: 15px;}
+#content .content_area .package_box dt{margin-bottom: 12px; font-size: var(--font-16-size); font-weight: 600; color: #023373;}
+#content .content_area .package_box dd{display: flex; align-items: center; gap: 8px; font-size: var(--font-14-size); color: var(--color-font1);}
+#content .content_area .package_box dd + dd{margin-top: 6px;}
+#content .content_area .package_box .icon{font-size: 1.1rem; color: var(--color-point1);}
+
+/* 운영 시간 막대 */
+#content .content_area .time_box{margin-top: 15px; padding: 18px; background: #eaf2fd; border-radius: 15px;}
+#content .content_area .time_box > dt{margin-bottom: 15px; font-size: var(--font-16-size); font-weight: 600; color: var(--color-font2);}
+#content .content_area .time_bar{display: flex; gap: 5px;}
+#content .content_area .time_bar li{font-size: var(--font-12-size); line-height: 1.4; color: var(--color-font2);}
+#content .content_area .time_bar li:before{content: ''; display: block; height: 6px; margin-bottom: 8px; border-radius: 3px;}
+#content .content_area .time_bar strong{display: block; font-size: var(--font-14-size);}
+#content .content_area .time_bar .step1{flex: 2;}
+#content .content_area .time_bar .step1:before{background: #023373;}
+#content .content_area .time_bar .step1 strong{color: #023373;}
+#content .content_area .time_bar .step2{flex: 1;}
+#content .content_area .time_bar .step2:before{background: #ddd;}
+#content .content_area .time_bar .step2 strong{color: #aaa;}
+#content .content_area .time_bar .step3{flex: 1.5;}
+#content .content_area .time_bar .step3:before{background: #68aaff;}
+#content .content_area .time_bar .step3 strong{color: #68aaff;}
+
+#content .content_area .package_info{margin-top: 20px; border-top: 2px solid #023373;}
+#content .content_area .package_info dt{padding: 15px 10px 0; font-size: var(--font-14-size); color: var(--color-font3);}
+#content .content_area .package_info dd{margin-top: 3px; padding: 0 10px 15px; border-bottom: 1px solid #d9d9d9;
+    font-size: var(--font-16-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .package_info dd span{display: block; margin-top: 3px; font-size: var(--font-12-size); font-weight: 500; color: var(--color-main);}
+
+
+/* Notice 아코디언 */
+#content .content_area .notice_acc{margin-top: 15px;}
+#content .content_area .notice_acc > li{border: 1px solid #023373; border-radius: 15px;}
+#content .content_area .notice_acc > li + li{margin-top: 12px;}
+#content .content_area .acc_btn{display: flex; align-items: center; gap: 10px; padding: 18px;}
+#content .content_area .acc_btn .icon{font-size: var(--font-20-size); color: #023373;}
+#content .content_area .acc_btn strong{flex: 1; font-size: var(--font-14-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .acc_btn .arrow{color: var(--color-font2); transition: transform .3s;}
+#content .content_area .notice_acc > li.on .arrow{transform: rotate(180deg);}   /* 열리면 화살표 위로 */
+
+#content .content_area .acc_cont{display: none; padding: 0 18px 18px;}
+#content .content_area .notice_acc > li.on .acc_cont{display: block;}
+#content .content_area .acc_cont li{position: relative; padding-left: 12px; font-size: var(--font-12-size); line-height: 1.6; color: var(--color-font2);}
+#content .content_area .acc_cont li + li{margin-top: 8px;}

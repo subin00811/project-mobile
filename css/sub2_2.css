@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* sub2_2-예매안내 콘텐츠 */
+
+/* 섹션 공통 */
+#content .content_area section{padding: 35px 20px;}
+#content .content_area section:last-child{border-bottom: 0;}
+#content .content_area section > h3{display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px;
+    font-size: var(--font-h4-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area section > h3 span{font-family: "Noto Serif KR", serif; font-size: 3.57rem; font-weight: 700; color: var(--color-point1);}
+#content .content_area .sec_txt{margin: -10px 0 20px; font-size: var(--font-16-size); color: var(--color-font2); font-weight: 500;}
+
+/* 예매 방법 */
+#content .content_area .reserve_list{border-top: 1px solid var(--color-point1); border-bottom: 1px solid var(--color-point1); padding: 20px 0;}
+#content .content_area .reserve_list dt{position: relative; padding-left: 58px;
+    font-size: var(--font-18-size); font-weight: 700; color: var(--color-font1);}
+#content .content_area .reserve_list dt .icon{position: absolute; left: 0; top: 2px; display: flex; align-items: center; justify-content: center;
+    width: 42px; height: 42px; border: 1px solid var(--color-point1); border-radius: 50%;
+    font-size: 1.3rem; color: var(--color-point1);}
+#content .content_area .reserve_list dt .en{display: block; font-size: var(--font-12-size); font-weight: 600; color: var(--color-point1);}
+#content .content_area .reserve_list dd{margin: 6px 0 25px; padding-left: 58px;
+    font-size: var(--font-14-size); line-height: 1.6; color: var(--color-font2);}
+#content .content_area .reserve_list dd:last-child{margin-bottom: 0;}
+
+/* 결제·환불 */
+#content .content_area .payment_list > li{padding-left: 15px; border-left: 3px solid var(--color-point3);}
+#content .content_area .payment_list > li + li{margin-top: 25px;}
+#content .content_area .payment_list strong{display: flex; align-items: center; gap: 5px;
+    font-size: var(--font-18-size); font-weight: 600; color: var(--color-point3);}
+#content .content_area .payment_list strong .material-symbols-outlined{font-size: var(--font-20-size);}
+#content .content_area .payment_list p{margin-top: 6px; font-size: var(--font-14-size); color: var(--color-font2);}
+#content .content_area .payment_list .dot_list{margin-top: 8px;}
+#content .content_area .payment_list .dot_list li{font-size: var(--font-14-size); color: var(--color-font1);}
+#content .content_area .payment_list .refund{margin-top: 12px; font-size: var(--font-12-size);}
+#content .content_area .payment_list .refund span{margin-right: 5px; font-size: var(--font-14-size); font-weight: 600; color: var(--color-main);}
+/* 취소·환불 수수료 박스 */
+#content .content_area .fee_box{margin-top: 30px; padding: 20px; background: var(--color-point3); border-radius: 15px;}
+#content .content_area .fee_box h4{font-size: var(--font-20-size); font-weight: 500; color: #fff;}
+#content .content_area .fee_box h4 span{display: block; font-size: var(--font-12-size); font-weight: 600; color: var(--color-point1);}
+#content .content_area .fee_step{display: flex; gap: 6px; margin-top: 20px;}
+#content .content_area .fee_step li{flex: 1; text-align: center; font-size: var(--font-12-size); color: var(--color-font3);}
+#content .content_area .fee_step li:before{content: ''; display: block; height: 7px; margin-bottom: 10px; border-radius: 10px;}
+#content .content_area .fee_step .step1:before{background: var(--color-sub1);}
+#content .content_area .fee_step .step2:before{background: var(--color-point1);}
+#content .content_area .fee_step .step3:before{background: var(--color-point2);}
+#content .content_area .fee_step .step4:before{background: #fff;}
+#content .content_area .fee_step strong{display: block; margin-bottom: 2px; font-size: var(--font-14-size); font-weight: 500; color: #fff;}
+
+
+/* 할인 정보 */
+#content .content_area .discount_list > li{display: flex; gap: 15px; padding: 22px 0; border-bottom: 1px solid #d9d9d9;}
+#content .content_area .discount_list > li:first-child{padding-top: 0;}
+#content .content_area .discount_list .rate{flex-shrink: 0; width: 55px; font-family: "Noto Serif KR", serif; 
+    font-size: var(--font-h5-size); font-weight: 700; color: var(--color-main);}
+#content .content_area .discount_list .dc_txt{flex: 1;}
+#content .content_area .discount_list .name{display: block; font-size: var(--font-20-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .discount_list .name span{margin-left: 5px; font-size: var(--font-12-size); font-weight: 400; color: var(--color-font2);}
+#content .content_area .discount_list .chip{display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0;}
+#content .content_area .discount_list .chip li{padding: 3px 10px; background: #f1f1f1; border-radius: 20px;
+    font-size: var(--font-12-size); color: var(--color-font2);}
+#content .content_area .discount_list .dc_txt > p{margin-bottom: 6px; font-size: var(--font-14-size); line-height: 1.6;
+    color: var(--color-font2);}
+#content .content_area .red_list li{font-size: var(--font-12-size); line-height: 1.6; color: var(--color-point3); list-style: disc; margin-left: 18px;}
+
+/* 회색 안내 박스 */
+#content .content_area .discount_notice{margin-top: 20px; padding: 20px 20px 20px 40px; background: #f4f4f4; border-radius: 10px;}
+#content .content_area .discount_notice li{position: relative; padding-left: 12px; font-size: var(--font-14-size);
+    line-height: 1.6; color: var(--color-font2); list-style: disc;}
+#content .content_area .discount_notice li + li{margin-top: 6px;}
+
+
+/* 예매 취소 방법 */
+#content .content_area .cancel_step li{position: relative; padding: 0 0 25px 55px;}
+#content .content_area .cancel_step li:before{content: ''; position: absolute; left: 17px; top: 30px; bottom: 0;
+    border-left: 1px dashed var(--color-point3);}
+#content .content_area .cancel_step li:last-child{padding-bottom: 0;}
+#content .content_area .cancel_step li:last-child:before{display: none;}
+#content .content_area .cancel_step .num{position: absolute; left: 0; top: -2px; display: flex; align-items: center; justify-content: center;
+    width: 35px; height: 35px; background: var(--color-point3); border-radius: 50%;
+    font-size: var(--font-18-size); font-weight: 700; color: var(--color-point1); font-family: "Noto Serif KR", serif;}
+#content .content_area .cancel_step dt{font-size: var(--font-20-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .cancel_step dd{margin-top: 4px; font-size: var(--font-14-size); line-height: 1.6; color: var(--color-font2);}
+
+/* 티켓 수령 */
+#content .content_area .receive_list{display: flex; gap: 10px;}
+#content .content_area .receive_list li{flex: 1; padding: 18px 15px; background: var(--color-sub2); border-radius: 15px;}
+#content .content_area .receive_list .icon{display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; background: var(--color-point3); border-radius: 50%; font-size: var(--font-20-size); color: var(--color-point1);}
+#content .content_area .receive_list strong{display: block; margin: 12px 0 8px; font-size: var(--font-18-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .receive_list p{font-size: var(--font-12-size); color: var(--color-font2); text-align: justify; word-break: break-all;}
+#content .content_area .receive_list p + p{margin-top: 6px;}
+
+/* 유의사항 박스 */
+#content .content_area .receive_notice{margin-top: 15px; padding: 18px 20px; background: var(--color-sub1); border-radius: 15px;}
+#content .content_area .receive_notice h4{display: flex; align-items: center; gap: 6px;
+    font-size: var(--font-18-size); font-weight: 600; color: var(--color-point3);}
+#content .content_area .receive_notice h4 .material-symbols-outlined{font-size: var(--font-20-size);}
+#content .content_area .receive_notice ul{margin-top: 10px; padding-left: 18px;}
+#content .content_area .receive_notice li{list-style: disc; font-size: var(--font-14-size); line-height: 1.6; color: var(--color-font1); text-align: justify; word-break: break-all;}
+#content .content_area .receive_notice li + li{margin-top: 6px;}
+
+
+

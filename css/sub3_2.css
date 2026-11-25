@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* sub3_2-관람안내 콘텐츠 */
+
+/* 공통 */
+#content .content_area{padding-bottom: 60px;}
+#content .content_area section > h3{font-size: var(--font-24-size); font-weight: 500; color: var(--color-font1);}
+
+/* 상단 배너 */
+#content .content_area .intro_banner{margin: 0 20px; padding: 50px 15px; border-radius: 15px; text-align: center;
+    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                url(../images/sub3_2/banner.png) no-repeat center / cover;}
+#content .content_area .intro_banner strong{display: block; font-family: "Noto Serif KR", serif;
+    font-size: var(--font-24-size); font-weight: 500; color: var(--color-sub1);}
+#content .content_area .intro_banner p{margin-top: 15px; font-size: var(--font-12-size); line-height: 1.6;
+    color: #fff;}
+
+/* 한눈에 보는 관람 매너 */
+#content .content_area .manner{padding: 20px 20px 0;}
+#content .content_area .manner h3{margin-bottom: 20px;}
+#content .content_area .manner_list{display: flex; gap: 8px;}
+#content .content_area .manner_list li{flex: 1; padding: 15px 5px; background: #f4f4f4; border-radius: 15px;
+    text-align: center; font-size: var(--font-12-size); color: var(--color-font1); font-weight: 500; word-break: keep-all;}
+#content .content_area .manner_list .icon{display: flex; align-items: center; justify-content: center;
+    width: 45px; height: 45px; margin: 0 auto 10px; background: #fff; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    font-size: var(--font-20-size); color: var(--color-point3);}
+
+/* 방문 전 / 관람 전 / 관람 중 */
+#content .content_area .etiquette{position: relative; padding: 50px 20px 0;}
+#content .content_area .etiquette h3{padding-bottom: 15px; border-bottom: 2px solid var(--color-font1);}
+#content .content_area .etiquette .when{position: absolute; right: 20px; top: 62px;
+    font-size: var(--font-12-size); color: var(--color-font2);}   /* 제목 오른쪽 작은 글씨 */
+#content .content_area .etiquette dt{margin-top: 25px; font-size: var(--font-18-size); font-weight: 600; color: var(--color-point3);}
+#content .content_area .etiquette dd{margin-top: 10px; font-size: var(--font-14-size); line-height: 1.7;
+    color: var(--color-font1); text-align: justify;}

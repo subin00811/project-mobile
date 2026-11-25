@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* sub2_1-현재공연 콘텐츠 */
+
+/* 공연 정보 파란박스 */
+#content .content_area .ticket_box{padding: 25px 20px 20px; background: #e9f0fa;}
+#content .content_area .ticket_top{display: flex; gap: 15px;}
+#content .content_area .ticket_top img{width: 95px; flex-shrink: 0; border-radius: 4px; box-shadow: 0 3px 8px rgba(0,0,0,.15);}
+#content .content_area .ticket_tit .badge{display: inline-block; padding: 3px 10px; background: var(--color-sub1);
+    border-radius: 20px; font-size: var(--font-12-size); font-weight: 600; color: var(--color-point3);}
+#content .content_area .ticket_tit h3{margin-top: 8px; font-size: var(--font-24-size); font-weight: 600; color: var(--color-font1);}
+#content .content_area .ticket_tit p{margin-top: 6px; font-size: var(--font-14-size); line-height: 1.6; color: var(--color-font2); word-break: break-all;}
+
+#content .content_area .ticket_info{display: grid; grid-template-columns: 100px 1fr; margin-top: 20px;
+    padding: 5px 15px; background: #fff; border-radius: 10px;}
+#content .content_area .ticket_info dt,
+#content .content_area .ticket_info dd{padding: 15px 0; border-bottom: 1px solid #d9d9d9; font-size: var(--font-14-size);}
+#content .content_area .ticket_info dt:last-of-type,
+#content .content_area .ticket_info dd:last-of-type{border-bottom: 0;}
+#content .content_area .ticket_info dt{display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--color-point3);}
+#content .content_area .ticket_info dt .material-symbols-outlined{font-size: var(--font-18-size);}
+#content .content_area .ticket_info dd{display: flex; align-items: center; color: var(--color-font1);}
+
+/* 탭 */
+#content .content_area .info_tab{display: flex; border-bottom: 1px solid #d9d9d9; background: #fff;}
+#content .content_area .info_tab li{flex: 1;}
+#content .content_area .info_tab a{display: block; margin-bottom: -1px; padding: 14px 0; border-bottom: 2px solid transparent;
+    text-align: center; font-size: var(--font-16-size); color: var(--color-font2);}
+#content .content_area .info_tab a.on{border-bottom-color: var(--color-point3); font-weight: 700; color: var(--color-point3);}
+
+/* 섹션 공통 */
+#content .content_area .frozen_intro,
+#content .content_area .frozen_cast,
+#content .content_area .frozen_video,
+#content .content_area .frozen_seat,
+#content .content_area .frozen_sale,
+#content .content_area .frozen_notice{padding: 30px 20px;}
+
+/* 그룹 사이 회색 구분선 */
+#content .content_area .frozen_cast,
+#content .content_area .frozen_seat,
+#content .content_area .frozen_notice{border-top: 8px solid #f2f2f2;}
+
+/* 같은 그룹 안의 섹션은 위 여백만 줄이기 */
+#content .content_area .frozen_video,
+#content .content_area .frozen_sale{padding-top: 0;}
+
+#content .content_area .content_area h3,
+#content .content_area section > h3{margin-bottom: 15px; font-size: var(--font-h5-size); font-weight: 600; color: var(--color-font1);}
+
+/* 더보기 링크 공통 */
+#content .content_area .more{display: inline-block; margin-top: 12px; font-size: var(--font-12-size);
+    font-weight: 600; color: var(--color-point3); text-decoration: underline;}
+
+/* 작품 소개 */
+#content .content_area .frozen_intro .lead{font-size: var(--font-20-size); font-family: "Noto Serif KR", serif; line-height: 1.5; font-weight: 600;
+    color: var(--color-point3); margin: 15px 0;}
+#content .content_area .frozen_intro p{margin-top: 15px; font-size: 1.07rem; line-height: 1.7;
+    color: var(--color-font1); text-align: justify; word-break: break-all;}
+#content .content_area .frozen_intro p + p{margin-top: 10px;}
+
+/* 캐스팅 */
+#content .content_area .frozen_cast{position: relative; padding-right: 0;}   /* 오른쪽은 끝까지 넘겨보이게 */
+#content .content_area .frozen_cast .swipe_txt{position: absolute; right: 20px; top: 45px;
+    font-size: var(--font-12-size); color: var(--color-font2);}
+#content .content_area .cast_swiper .swiper-slide{width: 70px; text-align: center;}
+#content .content_area .cast_swiper img{display: block; width: 100%; height: 95px; object-fit: cover; border-radius: 8px;}
+#content .content_area .cast_swiper span{display: block; margin-top: 8px; font-size: var(--font-12-size); font-weight: 600; color: var(--color-point3);}
+#content .content_area .cast_swiper strong{display: block; font-size: var(--font-14-size); font-weight: 500; color: var(--color-font1);}
+
+/* 영상 */
+#content .content_area .frozen_video .video_box{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    border-radius: 10px;
+}
+#content .content_area .frozen_video .video_box iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+#content .content_area .frozen_video p{margin-top: 12px; font-size: var(--font-14-size); font-weight: 600; color: var(--color-point3);}
+
+/* 좌석/가격 */
+#content .content_area .seat_ticket{position: relative; display: flex; background: var(--color-point3); border-radius: 12px; color: #fff;}
+
+#content .content_area .seat_ticket:before,
+#content .content_area .seat_ticket:after{content: ''; position: absolute; left: 38%; width: 16px; height: 16px;
+    margin-left: -8px; border-radius: 50%; background: #fff;}
+#content .content_area .seat_ticket:before{top: -8px;}
+#content .content_area .seat_ticket:after{bottom: -8px;}
+
+#content .content_area .seat_count{display: flex; flex-direction: column; justify-content: center; align-items: center;
+    width: 38%; font-size: .65rem; color: var(--color-font3);}
+#content .content_area .seat_count strong{font-family: "Noto Serif KR", serif; font-size: 2rem; font-weight: 600; color: var(--color-point1);}
+
+#content .content_area .seat_price{flex: 1; display: grid; grid-template-columns: 1fr auto;
+    padding: 15px 20px; border-left: 2px dashed var(--color-point1);}   /* 가운데 점선 */
+#content .content_area .seat_price dt{padding: 6px 0; font-size: var(--font-16-size); font-weight: 600; color: var(--color-point1);}
+#content .content_area .seat_price dd{padding: 6px 0; text-align: right; font-size: var(--font-16-size); font-weight: 400;}
+
+#content .content_area .seat_note{margin-top: 10px; font-size: var(--font-14-size); color: var(--color-font1); word-break: break-all;}
+#content .content_area .seat_note span{font-style: normal; color: var(--color-main);}
+
+/*  할인 정보 */
+#content .content_area .sale_list{display: flex; flex-wrap: wrap; gap: 8px;}
+#content .content_area .sale_list li{padding: 6px 16px; background: var(--color-sub1); border-radius: 20px;
+    font-size: var(--font-14-size); font-weight: 600; color: var(--color-point3);}
+#content .content_area .frozen_sale p{margin-top: 15px; font-size: var(--font-14-size); line-height: 1.6;
+    color: var(--color-font1); text-align: justify;}
+
+/* 알립니다 */
+#content .content_area .frozen_notice ul{padding: 20px 20px 20px 35px; background: #fbf3dc; border-radius: 4px;}
+#content .content_area .frozen_notice li{list-style: disc; font-size: var(--font-14-size); line-height: 1.5;
+    color: var(--color-font1);}
+#content .content_area .frozen_notice li + li{margin-top: 12px;}
+
+/* 예매하기 버튼 */
+#content .content_area .btn_wrap{padding: 12px 20px; background: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,.1);}
+#content .content_area .btn_ticket{display: block; padding: 12px 0; background: var(--color-main);
+    border-radius: 10px; text-align: center; font-size: var(--font-24-size); font-weight: 600; color: #fff;}
+
+
+
+

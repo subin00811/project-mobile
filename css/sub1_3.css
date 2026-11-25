@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* sub1_3-극장연혁 콘텐츠 */
+
+#content{padding-bottom: 50px;}
+/* 인트로 문구 */
+#content .content_area .intro_text{position: relative; margin: 0 20px 50px; padding: 35px 0 30px; border-top: 1px solid var(--color-point1);
+border-bottom: 1px solid var(--color-point1); text-align: center; font-size: var(--font-16-size); line-height: 1.7; word-break: break-all;}
+#content .content_area .intro_text span{color: var(--color-main);}
+#content .content_area .intro_text::before{content: '\201C'; position: absolute; left: 50%; top: -18px; transform: translateX(-50%);
+    padding: 0 15px; background: #fff; font-size: 2rem; line-height: 1; color: var(--color-point1);}
+
+/* 빨간 박스 */
+#content .content_area .record{background: var(--color-point3); border-radius: 20px; padding: 25px 30px; margin: 20px;}
+#content .content_area .record h3 span{display: block; font-size: var(--font-12-size); font-weight: 500; color: var(--color-point1);}
+#content .content_area .record h3{color: #fff; font-size: var(--font-18-size);}
+#content .content_area .history_box{display: flex; flex-wrap: wrap;}
+#content .content_area .history_box li{width: 50%; box-sizing: border-box; margin-top: 25px; padding-left: 15px;
+    border-left: 1px solid var(--color-point1); font-size: var(--font-12-size); color: #fff;}
+#content .content_area .history_box strong{display: block; font-size: 1.8rem; font-weight: 500; color: var(--color-point1);}
+#content .content_area .history_box strong span{margin-left: 2px; font-size: var(--font-12-size);}
+
+/* 탭 */
+#content .content_area .history_btn{display: flex; margin: 30px 20px 20px; padding: 4px; background: #f0f0f0; border-radius: 10px;}
+#content .content_area .history_btn li{flex: 1;}
+#content .content_area .history_btn a{display: block; padding: 8px 0; border-radius: 8px; text-align: center;
+    font-size: .9rem; color: var(--color-point3); font-weight: 500;}
+#content .content_area .history_btn a span{display: block;}
+#content .content_area .history_btn a.active{background: #fff; font-weight: 600;}
+
+/* 연혁 */
+#content .content_area .history_01,
+#content .content_area .history_02,
+#content .content_area .history_03{margin: 20px 20px 0;}
+#content .content_area .history_01 img,
+#content .content_area .history_02 img,
+#content .content_area .history_03 img{display: block; width: 100%; border-radius: 10px;}
+#content .content_area .history_wrap dl{display: flex; flex-wrap: wrap; margin-top: 15px;}
+#content .content_area .history_wrap dt{width: 95px; box-sizing: border-box; padding: 15px 10px 15px 0;
+    border-bottom: 1px solid #d9d9d9; font-size: var(--font-14-size); font-weight: 600; line-height: 1.7; color: var(--color-point3); word-break: keep-all;}
+#content .content_area .history_wrap dd{width: calc(100% - 95px); box-sizing: border-box; padding: 15px 0; text-align: justify;
+    border-bottom: 1px solid #d9d9d9; font-size: var(--font-14-size); line-height: 1.7; color: var(--color-font1); word-break: break-all;}
+
+

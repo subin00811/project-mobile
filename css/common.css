@@ -1,0 +1,247 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Noto Sans KR", sans-serif; */
+ /* font-family: "Noto Serif KR", serif; */
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "Roboto Serif", serif; */
+
+:root{
+    --color-main: #CF1218;
+    --color-point1: #c9a24b;
+    --color-point2: #d0311e;
+    --color-point3: #7a0c15;
+    --color-sub1: #f3e7c4;
+    --color-sub2: #fbf7ee;
+    --color-font1: #333;
+    --color-font2: #666;
+    --color-font3: #999;
+
+    --font-h2-size: ;
+    --font-h3-size: ;
+    --font-h4-size: 2.14rem; /*30px */
+    --font-h5-size: 2.00rem; /*28px */
+    --font-h6-size: ;
+    --font-gnb-size: ;
+    --font-24-size: 1.71rem; /*24px*/
+    --font-20-size: 1.43rem; /*20px*/
+    --font-18-size: 1.29rem; /*18px*/
+    --font-16-size: 1.14rem; /*16px*/
+    --font-14-size: 1rem; /*14px*/
+    --font-12-size: 0.86rem; /*12px*/
+    --font-10-size: 0.71rem; /*10px*/
+
+    --box-shadow1: 1px 1px 10px 1px rgba(0,0,0,.3);
+    --box-shadow2: 2px 2px 10px 2px rgba(0,0,0,.4);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* 스플래시 스크린 전체 화면 설정 */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f70000; /* 배경 색상 */
+  display: none; /* 기본 상태는 숨김 및 투명 처리 */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999; /* 최상단에 배치 */
+  transition: opacity 0.5s ease-out, visibility 0.5s; /* 사라질 때 애니메이션 */
+}
+
+/* 첫 방문자에게 스플래시를 노출할 때 붙일 클래스 */
+#splash-screen.active {
+  display: flex;          /* 원래 가지고 있던 flex 정렬 활성화 */
+  justify-content: center;
+  align-items: center;
+  opacity: 1;             /* 투명도 원복 */
+  visibility: visible;    /* 가시성 원복 */
+}
+
+/* 스플래시 이미지 크기 및 애니메이션 (선택) */
+.splash-logo {
+  width: 100%; /* 이미지 크기 조절 */
+  height: auto;
+}
+
+/* 스플래시가 끝났을 때 적용할 클래스 */
+#splash-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* 모바일 코딩 필수 공통영역 */
+* {
+ margin:0;
+ padding:0;
+ -webkit-text-size-adjust:none; }
+html{font-size: 14px;}
+body {
+ color:#333;
+ font-family: "Noto Sans KR", sans-serif;}
+img, fieldset { border:0; vertical-align:top }
+ul, ol, li, dl { list-style:none; }
+h1, h2, h3, h4, h5, h6 {
+ font-size:100%;
+ font-weight:normal; }
+hr { display:none; }
+a { color:#333; text-decoration: none; display: block; }
+em, i, address {
+ font-style:normal;
+ font-weight:normal; }
+legend, caption {
+ display:none;
+ clear:both; }
+input, textarea, select, button, table {
+ font-size:inherit;
+ font-family:inherit;
+ line-height:inherit; }
+section, nav, article, aside, hgroup, header, footer { display:block }
+textarea, input {
+ border-radius:1px;}
+textarea { resize:none; }
+label { cursor:pointer; }
+table{border-collapse: collapse;}
+.hidden,#skipNav{display: block; position: absolute; left:-1000%;top:0; width: 1px; height: 1px; overflow: hidden; color: #fff}
+
+
+/* 전체 공통 */
+#wrap{ width:100%; position: relative;  overflow:hidden;}
+
+/* 헤더공통 */
+#headerArea{background: rgba(255,255,255,.8); width: 100%; height: 84px; position: fixed; left: 0; top: 0; z-index: 100;}
+#headerArea .header_top{display: flex; justify-content: space-between; align-items: center;}
+#headerArea h1{font-size: 30px;}
+#headerArea h1 a{display: block; color: #333; text-decoration: none; padding: 20px;}
+#headerArea .header_top{display: flex; justify-content: space-between; align-items: center;
+    height: 85px; padding: 0 20px;}
+#headerArea .logo a{display: block; padding: 0;}
+#headerArea .logo img{display: block; width: 90px;}
+
+#headerArea .menu_ham {
+    display: block;
+    height: 50px;
+    position: relative;
+    z-index:30;
+}
+#headerArea .menu_ham span {
+    width: 30px;
+    height: 4px;
+    background: var(--color-main);
+    position: relative;
+    text-indent: -9999px;
+    display: block;
+    margin: 26px 15px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+#headerArea .menu_ham span::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--color-main);
+    position: absolute;
+    top: -7px;
+    left: 0;
+    border-radius: 5px;
+    transition: all .3s;
+}
+#headerArea .menu_ham span::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--color-main);
+    position: absolute;
+    top: 7px;
+    left: 0;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+/* 메뉴가 열렸을때 */
+#headerArea.mn_open .menu_ham span, 
+#headerArea.mn_open .menu_ham span::before, 
+#headerArea.mn_open .menu_ham span::after {
+    background: #333;
+}
+#headerArea.mn_open .menu_ham span {
+    background: rgba(0,0,0,0);
+}
+#headerArea.mn_open .menu_ham span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+#headerArea.mn_open .menu_ham span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* nav 영역*/
+#headerArea .modal{position: fixed; width: 100%; height: 100%; left: 0; top: 0;
+    z-index: 10; background: rgba(0,0,0,.8); display: none;}
+#headerArea #gnb{position: absolute; width: 80%; right:-100%; top:0;
+    opacity: 0; background: #fff; z-index:20;}
+#headerArea #gnb .gnb_logo{position: absolute; left: 25px; top: 31px; padding: 0;}
+#headerArea #gnb .gnb_logo img{display: block; width: 90px;}
+#headerArea #gnb .mainMenu{margin: 80px 25px 0;}
+#headerArea #gnb .mainMenu>li{border-bottom: 1px solid #d9d9d9;}
+#headerArea #gnb>ul>li{border-bottom:1px solid #d9d9d9;}
+#headerArea #gnb li h3 a{display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0; font-size: var(--font-20-size); font-weight: 700; color: var(--color-font1);}
+#headerArea #gnb li h3 .icon{color: var(--color-point3); font-size: .9rem;}
+#headerArea #gnb li ul{display: none; margin: 0 0 22px 18px; padding-left: 12px;
+    border-left: 2px solid var(--color-point1); background: none;}
+#headerArea #gnb li ul li a{display: block; padding: 5px 0; font-size: var(--font-18-size);
+    font-weight: 500; color: var(--color-font2);}
+#headerArea #gnb li ul li a:hover{color: var(--color-point3);}
+/* 로그인 / 회원가입 */
+#headerArea #gnb .top_menu{display: flex; margin: 30px 25px 0;}
+#headerArea #gnb .top_menu li{display: flex; align-items: center; border: 0;}
+#headerArea #gnb .top_menu li + li:before{content: '/'; margin: 0 10px; color: var(--color-font2);}
+#headerArea #gnb .top_menu a{padding: 0; font-size: 1rem; font-weight: 400; color: var(--color-font2);}
+
+#headerArea #gnb .sns_icon{display: flex; gap: 18px; margin: 15px 25px 0;}
+#headerArea #gnb .sns_icon li{border: 0;}
+#headerArea #gnb .sns_icon a{padding: 0; font-size: 2.4rem; color: var(--color-font2);}
+
+/* 푸터공통 */
+#footerArea .top_move{width: 50px; height: 50px; background: var(--color-main);
+border-radius: 50%; position: fixed; right: 15px; bottom: 50px; display: none; z-index: 50;}
+#footerArea .top_move span{display: flex; width: 100%; height: 100%; justify-content: center; align-items: center;
+font-weight: 500; color: #fff; font-size: var(--font-12-size);}
+
+
+#footerArea{position: relative; padding: 30px 20px 40px; background: var(--color-point3); color: rgba(255,255,255,.7);}
+
+#footerArea .footer_logo{display: block; width: 100px;}
+
+#footerArea address{margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--color-point1);
+    font-style: normal; font-size: .9rem; line-height: 1.8; color: var(--color-font3);}
+#footerArea address span{font-size: 1rem; font-weight: 600; color: #fff;}
+#footerArea address strong{display: block; margin-bottom: 5px; font-size: 1.1rem; color: #fff;}
+#footerArea .copy{font-size: .8rem;}
+
+#footerArea .footer_menu{display: flex; gap: 20px; margin-top: 20px;}
+#footerArea .footer_menu a{font-size: .95rem; font-weight: 700; color: #fff;}
+
+#footerArea .family_site{position: absolute; right: 20px; top: 30px;}
+#footerArea .family_site .arrow{display: flex; align-items: center; gap: 10px;
+    padding: 8px 15px; border: 1px solid var(--color-point1); font-size: .9rem; color: var(--color-point1);}
+#footerArea .family_site .aList{display: none; position: absolute; left: 0; right: 0; bottom: 100%; background: #fff;}
+#footerArea .family_site .aList a{display: block; padding: 8px 15px; font-size: .85rem; color: var(--color-font1);}
+
+
+
+
+
